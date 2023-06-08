@@ -40,11 +40,11 @@ h3 {
     font-size: 700;
 }
 
-.calc-output,
-p {
+.calc-output {
     max-width: 100%;
     width: 400px;
     height: 80px;
+    padding: 1.2rem;
     background-color: hsl(224, 36%, 15%);
     border-radius: 11px;
     -webkit-border-radius: 11px;
@@ -54,19 +54,20 @@ p {
     resize: none;
     border: 1px solid hsl(224, 36%, 15%);
     color: white;
+    font-size: 2.4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    gap: 1.2;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.current-output {
     font-size: 3.2rem;
+    font-weight: 300 !important;
 }
-
-.calc-output p {
-  text-align: right;
-  padding: 2.4rem;
-  overflow: hidden;
-}
-
-textarea:focus {
-    outline: none;
-}
-
 
 .main-calc {
     background-color: hsl(223, 31%, 20%);
@@ -86,16 +87,10 @@ textarea:focus {
     gap: 1.2rem;
 }
 
-/* hsl(28, 16%, 65%) */
-
 .num-btn,
-.num-plus,
-.num-minus,
-.num-multi,
-.num-division {
+.operation-btn {
     background-color: hsl(30, 25%, 89%);
     border: none;
-    /* box-shadow: 0 5px 20px hsl(28, 16%, 65%); */
     border-radius: 6px;
     width: 70px;
     height: 40px;
@@ -108,11 +103,13 @@ textarea:focus {
     color: hsl(221, 14%, 31%);
 }
 
-
-
-.delete-btn {
-    background-color: hsl(225, 21%, 49%);
+.clear-all-btn {
     width: 70px;
+}
+
+.btn-delete,
+.clear-all-btn {
+    background-color: hsl(225, 21%, 49%);
     height: 40px;
     border: none;
     border-radius: 6px;
@@ -125,8 +122,8 @@ textarea:focus {
     color: hsl(0, 0%, 100%);
 }
 
-.btn-reset {
-    width: 145px;
+.btn-delete {
+    width: 50%;
     height: 40px;
     border: none;
     border-radius: 6px;
@@ -141,7 +138,7 @@ textarea:focus {
 }
 
 .btn-equal {
-    width: 100%;
+    width: 50%;
     height: 40px;
     border: none;
     border-radius: 6px;
