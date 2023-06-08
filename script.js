@@ -15,7 +15,7 @@ const performCalculation = () => {
 }
 
 const displayResult = () => {
-    currentOutputElement.innerHTML = compute()
+    currentOutputElement.innerHTML = performCalculation()
 }
 
 const clearAllOutput = () => {
@@ -36,5 +36,5 @@ numberAndOperationButtons.forEach(button => {
     })
 })
 equalButton.addEventListener('click', displayResult)
-clearAllButton.addEventListener('click', clearAll)
-deleteButton.addEventListener('click', deleteChar)
+clearAllButton.addEventListener('click', clearAllOutput)
+deleteButton.addEventListener('click', deleteNumByNum)
