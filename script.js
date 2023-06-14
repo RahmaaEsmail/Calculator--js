@@ -7,20 +7,20 @@ const deleteButton = document.querySelector('.btn-delete')
 
 const appendOperands = (data) => {
     currentOutputElement.innerHTML += data;
-    removeZeroFromStart(data)
 }
 
 const removeZeroFromStart = (str) => {
 
-    while (str[0] === '0') {
+    while (str[0] === "0") {
         str = str.substring(1)
     }
     return str
 }
 
 const performCalculation = () => {
+    const data = removeZeroFromStart(currentOutputElement.innerHTML)
     try{
-    const result = eval(currentOutputElement.innerHTML)
+    const result = eval(data)
     return result
     }
     catch {
